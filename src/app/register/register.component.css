@@ -1,0 +1,186 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo 2", cursive;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+body {
+  background-color: #fffdfb;
+}
+.container {
+  background-color: #f5efe7;
+  margin: 5% 10%;
+  width: 80%;
+  height: auto;
+  padding: 2%;
+  border-radius: 20px;
+}
+.register-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.register-form-right {
+  text-align: center;
+  width: 80%;
+}
+.form-title {
+  font-weight: 700;
+  font-size: 30px;
+}
+.form-input {
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin-top: 20px;
+  width: 55%;
+  border: 1px solid rgba(170, 170, 170, 0.67);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 18px;
+}
+.btn-register-submit {
+  background-color: #d56b1e;
+  padding: 3px 20px;
+  border-radius: 20px;
+  border: 5px solid #f9deba;
+  font-weight: 700;
+  font-size: 25px;
+  color: white;
+  margin: 30px 0 20px 0;
+  cursor: pointer;
+}
+.link-register {
+  color: #aaa;
+}
+.link-register a {
+  color: #d56b1e;
+  text-decoration: none;
+  font-weight: 700;
+}
+.register-img {
+  width: 50%;
+}
+form > div {
+  text-align: -webkit-center;
+}
+
+.main {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  border-bottom: 1px solid #494fc0;
+}
+
+.main form {
+  max-width: 620px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main h1 {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #494fc0;
+}
+
+.main .form-group {
+  margin-bottom: 20px;
+}
+
+.main .form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.marquee {
+  overflow: hidden;
+  height: 30px;
+  background: #494fc0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+  width: 200%;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee span {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  display: inline-block;
+}
+
+@keyframes marquee {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+.form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.form-btn .form-btn__submit {
+  background-color: #494fc0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-btn .form-btn__submit:hover {
+  opacity: 0.8;
+}
+
+.form-btn .form-btn__register {
+  color: gray;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-btn .form-btn__register a {
+  color: #494fc0;
+  text-decoration: none;
+  font-weight: 700;
+}

@@ -1,0 +1,80 @@
+<!-- Login Form -->
+<div class="marquee">
+  <div class="marquee-content">
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+    <span>WiNGLE SHOES STORE - WiNGLE SHOES STORE</span>
+  </div>
+</div>
+<div class="main">
+  <h1>Đăng nhập</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Email"
+        formControlName="email"
+      />
+      <div
+        class="form-text text-danger"
+        *ngIf="Email.errors?.['required'] && (Email.dirty || Email.touched)"
+      >
+        Yêu cầu nhập email.
+      </div>
+      <div
+        class="form-text text-danger"
+        *ngIf="Email.errors?.['email'] && (Email.dirty || Email.touched)"
+      >
+        Email không hợp lệ.
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        id="pwd"
+        formControlName="pwd"
+        placeholder="Mật khẩu"
+      />
+      <div
+        class="form-text text-danger"
+        *ngIf="PWD.errors?.['required'] && (PWD.dirty || PWD.touched)"
+      >
+        Yêu cầu nhập mật khẩu.
+      </div>
+      <div
+        class="form-text text-danger"
+        *ngIf="PWD.errors?.['minlength'] || PWD.errors?.['maxlength'] && (PWD.dirty || PWD.touched)"
+      >
+        Mật khẩu phải có ít nhất 6 và dài tối đa 15 ký tự.
+      </div>
+    </div>
+    <div class="form-btn">
+      <button
+        type="submit"
+        [disabled]="loginForm.invalid"
+        class="form-btn__submit"
+      >
+        Đăng nhập
+      </button>
+      <div class="form-btn__register">
+        <span>hoặc</span>
+        <a href="/register">Đăng ký</a>
+      </div>
+    </div>
+  </form>
+</div>
